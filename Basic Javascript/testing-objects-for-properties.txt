@@ -1,0 +1,9 @@
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  let result = obj.hasOwnProperty(checkProp);
+  if (result == true) {
+    return obj[checkProp];
+  } 
+  return "Not Found";
+  // Only change code above this line
+}

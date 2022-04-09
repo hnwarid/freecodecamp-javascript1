@@ -1,0 +1,11 @@
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+
+  let randomInt = 0;
+
+  while (randomInt ===0) {
+    randomInt = Math.floor(Math.random() * (myMax -myMin +1)) + myMin;
+  }
+  return randomInt;
+  // Only change code above this line
+}

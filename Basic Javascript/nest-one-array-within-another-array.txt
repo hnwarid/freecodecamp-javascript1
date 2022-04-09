@@ -1,0 +1,2 @@
+// Only change code below this line
+const myArray = [[["here", "we", "have", "an", "array", "of", "strings"], "also", "of", "numbers", 1], [ "zero", 1, 2, 3, 4, 5, 6, 7, 8]];

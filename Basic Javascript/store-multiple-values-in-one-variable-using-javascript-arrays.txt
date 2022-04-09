@@ -1,0 +1,2 @@
+// Only change code below this line
+const myArray = ["They want string as the first element", 1234, "then number then string again", 45678, "so that is that."];

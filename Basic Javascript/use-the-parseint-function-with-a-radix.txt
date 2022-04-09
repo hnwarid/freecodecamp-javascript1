@@ -1,0 +1,14 @@
+function convertToInteger(str) {
+  let binaryNum = parseInt(str, 2);
+  return binaryNum;
+}
+
+convertToInteger("10011");
+
+/* from the hint, they don't use a variable 
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+convertToInteger("10011");
+*/
+  

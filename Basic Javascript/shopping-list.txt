@@ -1,0 +1,7 @@
+const myList = [
+                ["soap", 35],
+                ["detergent", 45],
+                ["shampoo", 20],
+                ["toothpaste", 10],
+                ["facewash", 50]
+              ];

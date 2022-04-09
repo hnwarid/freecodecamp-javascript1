@@ -1,0 +1,37 @@
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum > endNum) {
+    return [];
+  }
+  else {
+    const numArray = rangeOfNumbers(startNum+1, endNum);
+    numArray.unshift(startNum);
+    return numArray;
+  }
+  
+};
+
+console.log(rangeOfNumbers(5, 10));
+
+/*
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+Solution 2 (Click to Show/Hide)
+function rangeOfNumbers(startNum, endNum) {
+  return startNum === endNum
+    ? [startNum]
+    : rangeOfNumbers(startNum, endNum - 1).concat(endNum);
+}
+Solution 3 (Click to Show/Hide)
+function rangeOfNumbers(startNum, endNum) {
+  return startNum === endNum
+    ? [startNum]
+    : [...rangeOfNumbers(startNum, endNum - 1), endNum ];
+}
+*/
