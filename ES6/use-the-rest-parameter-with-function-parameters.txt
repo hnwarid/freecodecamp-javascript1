@@ -1,0 +1,20 @@
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+
+// const sum = (...args) => {
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// };
+
+// const sum = (x, y, z) => {
+//   const args = [x, y, z];
+//   let total = 0;
+//   for (let i = 0; i < args.length; i++) {
+//     total += args[i];
+//   }
+//   return total;
+// }
