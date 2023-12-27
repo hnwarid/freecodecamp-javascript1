@@ -1,0 +1,103 @@
+let username = "JackOfAllTrades";
+// let userCheck = /^\d+[a-z]+\d+$/gi; // Change this line
+// Your regex should match the string JACK
+// Your regex should match the string Jo
+// Your regex should match the string Oceans11
+// Your regex should match the string RegexGuru
+// Your regex should match the string Z97
+// Your regex should match the string AB1
+
+// let userCheck = /^[a-zA-Z0-9]+$/;
+// Your regex should not match the string J
+// Your regex should not match the string 007
+// Your regex should not match the string 9
+// Your regex should not match the string A1
+// Your regex should not match the string BadUs3rnam3
+// Your regex should not match the string c57bT3
+
+// let userCheck = /^[A-Za-z]*[0-9]+$/;
+// Your regex should match the string JACK
+// Your regex should match the string Jo
+// Your regex should match the string RegexGuru
+// Your regex should not match the string 007
+// Your regex should not match the string 9
+// Your regex should not match the string A1
+
+// let userCheck = /^[A-Za-z]+[0-9]+$/;
+// Your regex should match the string JACK
+// Your regex should match the string Jo
+// Your regex should match the string RegexGuru
+// Your regex should not match the string A1
+
+// let userCheck = /^[A-Za-z][A-Za-z]+[0-9]+$/;
+// Your regex should match the string JACK
+// Your regex should match the string Jo
+// Your regex should match the string RegexGuru
+// Your regex should match the string Z97
+
+// let userCheck = /^[A-Za-z][A-Za-z0-9]*[0-9]$/; 
+// Your regex should match the string JACK
+// Your regex should match the string Jo
+// Your regex should match the string RegexGuru
+// Your regex should not match the string A1
+// Your regex should not match the string BadUs3rnam3
+// Your regex should not match the string c57bT3
+
+// let userCheck = /^[A-Za-z]+[A-Za-z]+$/;
+// Your regex should match the string Oceans11
+// Your regex should match the string Z97
+// Your regex should match the string AB1
+
+// let userCheck = /^[A-Za-z]+[A-Za-z0-9]+$/;
+// let userCheck = /^[A-Za-z][A-Za-z]+[0-9]*$|^[A-Za-z][A-Za-z]*[0-9]+/;
+// Your regex should not match the string A1
+// Your regex should not match the string BadUs3rnam3
+// Your regex should not match the string c57bT3
+
+// let userCheck = /^[A-Za-z][A-Za-z]+[A-Za-z0-9]+$/;
+// Your regex should match the string Jo
+// Your regex should not match the string BadUs3rnam3
+// Your regex should match the string Z97
+
+// let userCheck = /^[A-Za-z][A-Za-z]+[A-Za-z0-9]*$/;
+// Your regex should not match the string BadUs3rnam3
+// Your regex should match the string Z97
+
+// let userCheck = /^[A-Za-z][A-Za-z]+[0-9]*$/;
+// Your regex should match the string Z97
+
+// let userCheck = /^[A-Za-z]+[0-9]*$/;
+// let userCheck = /^[A-Za-z][A-Za-z]*[0-9]*$/;
+// Your regex should not match the string J
+// Your regex should not match the string A1
+
+// let userCheck = /^[A-Za-z]+[A-Za-z]+[A-Za-z]+[0-9]*$/;
+// Your regex should match the string Jo
+// Your regex should match the string Z97
+// Your regex should match the string AB1
+
+// let userCheck = /^[A-Za-z][A-Za-z]*[0-9]+$/;
+// Your regex should match the string JACK
+// Your regex should match the string Jo
+// Your regex should match the string RegexGuru
+// Your regex should not match the string A1
+
+// let userCheck = /^[A-Za-z][A-Za-z]*[0-9]+$|^[A-Za-z][A-Za-z]+[0-9]*$/;
+// Your regex should not match the string A1 
+
+// let userCheck = /^[A-Za-z]+[0-9]*[A-Za-z0-9]*$/;
+// Your regex should not match the string J
+// Your regex should not match the string A1
+// Your regex should not match the string BadUs3rnam3
+// Your regex should not match the string c57bT3
+
+// let userCheck = /^[A-Za-z][A-Za-z]+[0-9]*$|^[A-Za-z][0-9][0-9]+/;
+// Your regex should not match the string c57bT3
+
+// let userCheck = /^[A-Za-z][A-Za-z]+[0-9]*$|^[A-Za-z]+[0-9][0-9]+$/;
+// running tests
+// tests completed
+
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]+\d\d+$/i;  // simplified 
+
+let result = userCheck.test(username);
