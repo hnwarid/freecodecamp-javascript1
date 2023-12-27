@@ -1,0 +1,35 @@
+const foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+foods['bananas'] = 13;
+let fruit = 'grapes';
+foods[fruit] = 35;
+foods.strawberries = 27;
+// Only change code below this line
+
+// Only change code above this line
+
+console.log(foods);
+
+// similar to python's dictionary 
+// const tekkenCharacter = {
+//   player: 'Hwoarang',
+//   fightingStyle: 'Tae Kwon Doe',
+//   human: true
+// };
+
+// tekkenCharacter.origin = 'South Korea';
+// const eyes = 'eye color';
+// tekkenCharacter[eyes] = 'brown';
+
+// {
+//   player: 'Hwoarang',
+//   fightingStyle: 'Tae Kwon Doe',
+//   human: true,
+//   origin: 'South Korea',
+//   'hair color': 'dyed orange',
+//   'eye color': 'brown'
+// };

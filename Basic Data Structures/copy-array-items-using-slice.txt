@@ -1,0 +1,12 @@
+function forecast(arr) {
+  // Only change code below this line
+  let sliced_arr = arr.slice(2,4);
+  return sliced_arr;
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+
+// let todaysWeather = weatherConditions.slice(1, 3);
+// todaysWeather value =  ['snow', 'sleet']
