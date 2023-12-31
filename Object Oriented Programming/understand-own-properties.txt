@@ -13,3 +13,14 @@ for (let property in canary) {
 }
 
 console.log(ownProps);
+
+
+// let ownProps = [];
+
+// for (let property in duck) {
+//   if(duck.hasOwnProperty(property)) {
+//     ownProps.push(property);
+//   }
+// }
+
+// console.log(ownProps);

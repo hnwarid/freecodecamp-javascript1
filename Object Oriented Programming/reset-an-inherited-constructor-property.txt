@@ -6,9 +6,23 @@ Bird.prototype = Object.create(Animal.prototype);
 Dog.prototype = Object.create(Animal.prototype);
 
 // Only change code below this line
+
+let duckTwo = new Bird();
+let beagleTwo = new Dog();
+console.log("duckTwo constructor:", duckTwo.constructor);
+console.log("beagleTwo constructor:", beagleTwo.constructor);
+
 Bird.prototype.constructor = Bird;
 Dog.prototype.constructor = Dog;
-
-
 let duck = new Bird();
 let beagle = new Dog();
+console.log("duck constructor:", duck.constructor);
+console.log("beagle constructor", beagle.constructor);
+
+// function Bird() { }
+// Bird.prototype = Object.create(Animal.prototype);
+// let duck = new Bird();
+// duck.constructor
+
+// Bird.prototype.constructor = Bird;
+// duck.constructor

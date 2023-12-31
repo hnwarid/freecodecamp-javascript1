@@ -6,3 +6,11 @@ let beagle = new Dog("Snoopy");
 
 // Only change code below this line
 Dog.prototype.isPrototypeOf(beagle);
+
+// function Bird(name) {
+//   this.name = name;
+// }
+
+// let duck = new Bird("Donald");
+
+// Bird.prototype.isPrototypeOf(duck);

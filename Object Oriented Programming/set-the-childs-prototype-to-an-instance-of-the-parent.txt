@@ -13,3 +13,10 @@ function Dog() { }
 Dog.prototype = Object.create(Animal.prototype);
 
 let beagle = new Dog();
+
+beagle.eat();
+
+// Bird.prototype = Object.create(Animal.prototype);
+
+// let duck = new Bird("Donald");
+// duck.eat();

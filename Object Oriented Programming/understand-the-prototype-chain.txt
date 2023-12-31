@@ -8,3 +8,14 @@ Dog.prototype.isPrototypeOf(beagle);  // yields true
 
 // Fix the code below so that it evaluates to true
 Object.prototype.isPrototypeOf(Dog.prototype);
+
+// function Bird(name) {
+//   this.name = name;
+// }
+
+// typeof Bird.prototype;
+
+// Object.prototype.isPrototypeOf(Bird.prototype);
+
+// let duck = new Bird("Donald");
+// duck.hasOwnProperty("name");
