@@ -1,5 +1,5 @@
 let ohStr = "Ohhh no";
-let ohRegex = /oh{3,6} no/i; // Change this line
+let ohRegex = /oh{3,6} no/gi; // Change this line
 let result = ohRegex.test(ohStr);
 
 // let A4 = "aaaah";

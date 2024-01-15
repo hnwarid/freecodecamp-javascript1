@@ -18,7 +18,7 @@ let myString = "Eleanor Roosevelt";
 // Your regex myRegex should return true for the string Franklin D. Roosevelt
 
 let myRegex = /^(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt$/;
-
+// let myRegex = /^(Eleanor|Franklin) ([A-Z]. )?Roosevelt$/;
 
 let result = myRegex.test(myString); // Change this line
 // After passing the challenge experiment with myString and see how the grouping works

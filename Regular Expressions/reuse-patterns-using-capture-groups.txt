@@ -14,6 +14,7 @@ let repeatNum = "42 42 42";
 // Your regex should not match the string 101 102 103.
 
 // let reRegex = /(\d+) \1 \1/; 
+// let reRegex = /(\d{1,}) \1 \1/;
 // Your regex should not match the string 42 42 42 42.
 
 // let reRegex = /(\d+)\s\1\2\1/; 
@@ -22,6 +23,7 @@ let repeatNum = "42 42 42";
 // Your regex should match the string 10 10 10.
 
 let reRegex = /^(\d+) \1 \1$/;
+// let reRegex = /^(\d{1,}) \1 \1$/g; 
 
 // let reRegex = /^(\d+) \1 \1(?!.)/; 
 

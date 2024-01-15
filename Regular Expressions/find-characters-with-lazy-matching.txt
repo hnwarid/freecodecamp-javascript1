@@ -1,5 +1,6 @@
 let text = "<h1>Winter is coming</h1>";
 let myRegex = /<h*?1>/; // Change this line
+// let myRegex = /<[a-z]+[0-9]+?>/; // this works too
 let result = text.match(myRegex);
 
 
