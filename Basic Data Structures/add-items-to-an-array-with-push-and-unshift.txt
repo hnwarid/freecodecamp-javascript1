@@ -6,6 +6,8 @@ function mixedNumbers(arr) {
   arr.push(7);
   arr.push('VIII');
   arr.push(9);
+  // arr.unshift(...['I', 2, 'three']); // this is simpler
+  // arr.push(...[7, 'VIII', 9]);
   // Only change code above this line
   return arr;
 }

@@ -3,6 +3,7 @@ function filteredArray(arr, elem) {
   // Only change code below this line
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].indexOf(elem) === -1) {
+    // if (arr[i].indexOf(elem) < 0) { // I find this works too 
       newArr.push(arr[i]);
     } 
     // continue
