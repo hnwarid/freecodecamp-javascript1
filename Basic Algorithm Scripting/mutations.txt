@@ -4,8 +4,7 @@ function mutation(arr) {
   for (let i = 0; i < test.length; i++) {
     if (string.indexOf(test[i]) >= 0) {
       continue;
-    } else
-    return false;
+    } return false;
   }
   return true;
 }

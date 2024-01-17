@@ -1,6 +1,10 @@
 function findElement(arr, func) {
   // let num = 0;
-  // return num;
+    // for (num; num < arr.length; num++) {
+  //   if (func(arr[num] ) === true) {
+  //     return arr[num];
+  //   }
+  // }
   for (let i = 0; i < arr.length; i++) {
     if (func(arr[i]) === true) {
       return arr[i]
