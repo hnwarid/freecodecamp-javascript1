@@ -1,0 +1,33 @@
+function add(x) {
+  // Only change code below this line
+  return function(y) {
+    return function(z) {
+      return x + y + z
+    }
+  } 
+  // Only change code above this line
+}
+
+// arrow function form 
+// const add = x => y => z => x+y+z
+
+add(10)(20)(30);
+
+
+// function unCurried(x, y) {
+//   return x + y;
+// }
+// function curried(x) {
+//   return function(y) {
+//     return x + y;
+//   }
+// }
+// const curried = x => y => x + y
+// curried(1)(2) // 3
+
+// partial application: applying a few arguments to a function at a time and returning another function that is applied to more arguments
+// function impartial(x, y, z) {
+//   return x + y + z;
+// }
+// const partialFn = impartial.bind(this, 1, 2);
+// partialFn(10); // 13

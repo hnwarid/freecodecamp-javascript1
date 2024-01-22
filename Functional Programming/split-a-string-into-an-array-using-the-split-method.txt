@@ -1,0 +1,14 @@
+function splitify(str) {
+  // Only change code below this line
+  const arr = str.split(/[\s-.,!$%^&*()_-]/) 
+  // /[^A-Za-z0-9_]/ 
+  // /\W/
+  return arr
+  // Only change code above this line
+}
+
+splitify("Hello World,I-am code");
+
+console.log(splitify("Hello World,I-am code"))
+console.log(splitify("Earth-is-our home"))
+console.log(splitify("This.is.a-sentence"))

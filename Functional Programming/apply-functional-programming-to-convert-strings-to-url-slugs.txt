@@ -1,0 +1,13 @@
+// Only change code below this line
+function urlSlug(title) {
+  let titleStr = title.toLowerCase().split(/[^a-z0-9]/)
+  // console.log(titleStr)
+  // console.log(title)
+  return titleStr.filter(word => word.length>0).join("-")
+  // console.log(titleStr)
+}
+// Only change code above this line
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+
+console.log(urlSlug("Winter Is Coming"))
+console.log(urlSlug(" Winter Is Coming"))

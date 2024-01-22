@@ -1,0 +1,13 @@
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  // return original.push(newItem);
+  // use concat so the original array is not modified
+  // this function becomes a pure function
+  return original.concat(newItem)
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);

@@ -1,0 +1,22 @@
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+  return arr.sort((a, b) => (a === b ? 0 : a < b ? -1 : 1))
+  // Only change code above this line
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]))
+console.log(alphabeticalOrder(["x", "h", "a", "m", "n", "m"]))
+console.log(alphabeticalOrder(["a", "a", "a", "a", "x", "t"]))
+
+// 
+// function reverseAlpha(arr) {
+//   return arr.sort(function(a, b) {
+//     return a === b ? 0 : a < b ? 1 : -1;
+//   });
+// }
+
+// reverseAlpha(['l', 'h', 'z', 'b', 's']);
+// a === b ? 0: If a is equal to b, it returns 0, indicating that the elements are considered equal in terms of sorting.
+// a < b ? 1 : -1: If a is less than b, it returns 1, indicating that a should come after b in the sorted order. If a is greater than or equal to b, it returns -1, indicating that a should come before b in the sorted order
