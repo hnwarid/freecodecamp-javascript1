@@ -1,0 +1,105 @@
+function fearNotLetter(str) {
+  let letters = "abcdefghijklmnopqrstuvwxyz"
+  // let missing = ""
+  // let status = true
+  let index = letters.indexOf(str[0])
+  let i = 0
+
+  // first case, base case if everything is the same 
+  if (str[str.length-1] === letters[letters.length-1-index]) {
+    return undefined
+  }
+
+  for (index; index <letters.length; index++) {
+    for (i; i < str.length; i++) {
+      console.log("str =", str[i], "letter =", letters[index])  
+      if (str[i] === letters[index]) {
+        i += 1
+        // index += 1
+        break
+      } else if (str[i] !== letters[index]) {
+        return letters[index]
+      }
+      // console.log(str[i], letters[index])
+    }
+    // console.log(str[i], letters[index])
+  
+  }
+  // return missing;
+
+  for (let i = 0; i < str.length; i++) {
+    for (index; index <letters.length; index++) {
+      // console.log(index, letters.length)
+      console.log(str[i], letters[index])
+
+      if (str[i] === letters[index]) {
+        // missing += str[i]
+        break
+      } 
+      // let test = letters[letters.indexOf[str[i]]]
+      // console.log(str[i], letters[str.indexOf[str[i]]])
+      // console.log(str[i], test)
+      // console.log(index, i)
+    // console.log(str[i], letters[index])
+    }
+    //  console.log(index, i)
+     console.log(str[i+1], letters[index+1])
+    if (str[i] === letters[i]) {
+      
+    }
+  }
+  return missing;
+}
+
+// fearNotLetter("abce");
+
+// console.log(fearNotLetter("abce"))
+// console.log(fearNotLetter("abcdefghjklmno") )
+console.log(fearNotLetter("stvwx"))
+// console.log(fearNotLetter("bcdf"))
+// console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz"))
+
+
+// passed 3 of 5 tests // mistake on indexing 
+//   let missing = ""
+//   let startIndex = alphabet.indexOf(str[0])
+//   const endIndex = str.length + startIndex
+//     for (startIndex; startIndex < endIndex; startIndex++) {
+//     console.log(startIndex, endIndex)
+//     console.log(str[startIndex], alphabet[startIndex])
+//       if (str[startIndex] !== alphabet[startIndex]) {
+//         missing += alphabet[startIndex]
+//         break
+//       } else if (str[endIndex] === alphabet[endIndex]) {
+//           return undefined
+//       }
+//   }
+//   return missing;
+// }
+
+// function fearNotLetter(str) {
+//   let alphabet = "abcdefghijklmnopqrstuvwxyz"
+//   let missing = ""
+//   // let startIndex = alphabet.indexOf(str[0])
+//   // console.log(startIndex)
+//   // const endIndex = str.length + startIndex
+//   // console.log((endIndex))
+//   for (let i = 0; i < str.length; i++) {
+//     for (let startIndex = alphabet.indexOf(str[0]); startIndex < alphabet.length; startIndex++) {
+//     console.log(startIndex, alphabet.length)
+//     console.log(str[i], alphabet[startIndex])
+//     // console.log(alphabet[alphabet.indexOf(str[i])])
+//     // if (str[i+1] !== alphabet.indexOf(str[i])) {
+//       if (str[i] === alphabet[startIndex]) {
+//       // console.log(alphabet[alphabet.indexOf(str[i+1])])
+//         // missing += alphabet[str[i+1]]
+//         break
+//     // } else if (alphabet.indexOf(str[i]) >= 0) {
+//       // missing += alphabet[i]
+//       } // else if (str[endIndex] === alphabet[endIndex]) {
+//       //     return undefined
+//       // }
+//     }
+//   }
+//   return missing;
+// }

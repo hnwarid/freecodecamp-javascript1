@@ -1,0 +1,48 @@
+function myReplace(str, before, after) {
+  // split the sentence into words 
+  let arr = str.split(" ")
+  // console.log(arr)
+  // find the index of before word
+  let replaceIndex = arr.indexOf(before)
+  // console.log(arr[replaceIndex])
+  // console.log(arr[replaceIndex][0])
+  // let word = arr[replaceIndex][0]
+  // let word = before[0]
+  // console.log(word)
+  // console.log(arr[replaceIndex][0].match(/^[A-Z]/))
+
+  // console.log(word.match(/[A-Z]/))
+  // if (before.match(/^[A-Z]/) == true) {
+    if ((/^[A-Z]/).test(before) === true) {
+    after = after[0].toUpperCase() + after.slice(1)
+    console.log(after) 
+    // arr[replaceIndex] = after
+    // return arr.join(" ");
+    } else if ((/^[A-Z]/).test(before) === false) {
+      after = after[0].toLowerCase() + after.slice(1)
+    }
+  // console.log(after)
+  arr[replaceIndex] = after
+  // console.log(arr)
+  return arr.join(" ");
+}
+
+
+// myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"))
+console.log(myReplace("Let us go to the store", "store", "mall"))
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+console.log(myReplace("I think we should look up there", "up", "Down") )
+console.log(myReplace("This has a spellngi error", "spellngi", "spelling"))
+console.log(myReplace("Let us get back to more Coding", "Coding", "algorithms"))
+
+
+
+// without spelling check passes 2 of 6 tests 
+  // let arr = str.split(" ")
+  // // console.log(arr)
+  // let replaceIndex = arr.indexOf(before)
+  // arr[replaceIndex] = after
+  // // console.log(arr)
+  // return arr.join(" ");

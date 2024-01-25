@@ -1,0 +1,26 @@
+function pairElement(str) {
+  let pairArr = [];
+  // make a DNA pair object
+  const pair = {
+    A: "T",
+    T: "A",
+    G: "C", 
+    C: "G"
+  }
+
+  // split the string, then
+  pairArr = str.split("")
+  // console.log(pairArr)
+
+  // map each element to corresponding pair
+  pairArr = pairArr.map(base => [base, pair[base]])
+  // console.log(pairArr)
+
+  // push to array 
+
+
+  // return the array 
+  return pairArr;
+}
+
+pairElement("GCG");

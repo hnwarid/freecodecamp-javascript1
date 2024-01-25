@@ -1,0 +1,79 @@
+function uniteUnique(arr) {
+  // create an empty array
+  let newArr = []
+
+  // loop through arr
+  for (let i = 0; i < arguments.length; i++) {
+    let subArr = arguments[i]
+    // console.log(arguments.length)
+    // console.log(subArr)
+    // console.log(newArr)
+
+  // loop through item
+    for (let j = 0; j < subArr.length; j++) {
+      // console.log(subArr[j])
+      // console.log(newArr)
+      // let val = subArr[j]
+
+  // if not already in empty array, push
+      if (newArr.indexOf(subArr[j]) < 0) {
+        newArr.push(subArr[j])
+      }
+      // if (newArr.indexOf(val) < 0) {
+      //   newArr.push(val)
+      // }
+    }
+  }
+  
+  return newArr;
+}
+
+// uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) )
+console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
+console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+console.log(uniteUnique([1, 3, 2], [5, 4], [5, 6]))
+console.log(uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1]))
+
+
+// totally wrong, same item unchecked
+  // // create an empty array
+  // let newArr = [];
+  // // loop through arr
+  // for (const subArr in arr) {
+  // // loop through item
+  //   for (let item in arr[subArr]) {
+  //     console.log(arr[subArr])
+  // // if not already in empty array, push
+  //     if (newArr.indexOf(arr[subArr][item]) < 0) {
+  //       newArr.push(arr[subArr][item])
+  //     }
+  //   }
+  // }
+  // return newArr;
+
+  // passes 4 of 5 tests, problem with first subArray
+  //   // create an empty array
+  // let newArr = arr // here is the mistake smh 
+
+  // // loop through arr
+  // for (let i = 0; i < arguments.length; i++) {
+  //   let subArr = arguments[i]
+  //   // console.log(arguments.length)
+  //   // console.log(subArr)
+
+  // // loop through item
+  //   for (let j = 0; j < subArr.length; j++) {
+  //     console.log(subArr[j])
+
+  // // if not already in empty array, push
+  //     if (newArr.indexOf(subArr[j]) < 0) {
+  //       console.log(newArr)
+  //     // if (newArr.indexOf(arr[i][j]) < 0 && [i].indexOf(j) < 0) {
+  //       newArr.push(subArr[j])
+  //     }
+  //   }
+  // }
+  
+  // return newArr;

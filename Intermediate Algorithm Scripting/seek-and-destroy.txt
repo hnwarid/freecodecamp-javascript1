@@ -1,0 +1,34 @@
+function destroyer(arr, ...vals) {
+  let newArr = []
+  // console.log(...vals)
+  // console.log(vals)
+
+  for (let i = 0; i < arr.length; i++) {
+    let remove = false
+    for (let j = 0; j < vals.length; j++) {
+      // console.log("arr =", arr[i], "val = ", vals[j])
+      // if (arr.indexOf(vals[j]) != -1) {
+      if (arr[i] == vals[j]) {   
+        remove = true     
+        // newArr.push(arr[i])
+        // console.log(newArr)
+        // continue 
+      // } else {
+      //   newArr.push(arr[i])
+      }
+    }
+    if (remove == false) {
+      newArr.push(arr[i])
+    } 
+  }
+  // console.log(newArr)
+  return newArr;
+}
+
+// destroyer([1, 2, 3, 1, 2, 3], 2, 3)
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+console.log(destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3))
+console.log(destroyer([2, 3, 2, 3], 2, 3))
+console.log(destroyer(["tree", "hamburger", 53], "tree", 53))
+console.log(destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"))

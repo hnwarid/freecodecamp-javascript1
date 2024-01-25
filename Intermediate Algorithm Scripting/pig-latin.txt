@@ -1,0 +1,48 @@
+function translatePigLatin(str) {
+  let newStr = "";
+  let vowelIndex = str.indexOf(str.match(/[aiueo]/))
+  // console.log("vowelIndex of", str, "is", vowelIndex)
+
+  for (let i = vowelIndex; i < str.length; i++) {
+    // if (str[0].match(/[aiueo]/) ) { 
+    //   break
+    // }
+  // first case with vowels 
+    if (i == 0) {
+      newStr = str + "way"
+      // break // works for 1st and 2nd but not third case 
+      return newStr;
+  // second case without vowels 
+    } else if (i < 0) {
+      newStr = str + "ay"
+      // break
+      return newStr;
+  // third case consonants before vowels 
+    } else if (i > 0) {
+        newStr += str[i]
+    } 
+    // for (vowelIndex = str.indexOf(str.match(/[aiueo]/)); vowelIndex >= 0; vowelIndex--) {
+        // }
+        // newStr += str[vowelIndex]
+  }
+  // third case continuation
+  // console.log(newStr) 
+  // console.log("vowelIndex", vowelIndex)
+  for (let i = 0; i < vowelIndex; i++) {
+    newStr += str[i]
+  }
+  // again, third case continuation
+  newStr += "ay"
+  return newStr;
+}
+
+// translatePigLatin("consonant"); // should be onsonantcay
+
+console.log(translatePigLatin("consonant"))
+console.log(translatePigLatin("rhythm"))
+console.log(translatePigLatin("paragraphs"))
+console.log(translatePigLatin("glove"))
+console.log(translatePigLatin("algorithm"))
+console.log(translatePigLatin("eight"))
+console.log(translatePigLatin("schwartz"))
+console.log(translatePigLatin("rhythm"))

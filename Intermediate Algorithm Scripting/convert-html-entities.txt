@@ -1,0 +1,64 @@
+function convertHTML(str) {
+  // make object to map 
+  const symbols = {
+    "&": "&amp;",
+   ">": "&gt;",
+    "<": "&lt;",
+    '"': '&quot;',
+    "'": "&apos;"
+  }
+
+  // find the symbol, replace it
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    // console.log(str[i])
+    let char = str[i]
+    // console.log(char)
+    // console.log(symbols[char])
+    if (symbols.hasOwnProperty(char)) {
+      newStr += symbols[char]
+      continue // break from current iteration 
+    }
+    newStr += str[i]
+  }
+  // return replaced string
+  return newStr;
+}
+
+// convertHTML("Dolce & Gabbana");
+
+// console.log(convertHTML("Dolce & Gabbana"))
+console.log(convertHTML('Stuff in "quotation marks"'))
+console.log(convertHTML("Schindler's List"))
+console.log()
+console.log()
+// console.log(convertHTML("<>"))
+
+// passed 5 of 7 tests, without comparison instead of hasOwnProperty: only one test not containing symbols...
+// turns out, 6 test is typo qout instead of quot 
+// and apos not included for 7th test
+// function convertHTML(str) {
+//   // make object to map 
+//   const symbols = {
+//     "&": "&amp;",
+//    ">": "&gt;",
+//     "<": "&lt;",
+//     '"': '&qout;',
+//   }
+
+//   // find the symbol, replace it
+//   let newStr = "";
+//   for (let i = 0; i < str.length; i++) {
+//     // console.log(str[i])
+//     let char = str[i]
+//     // console.log(char)
+//     // console.log(symbols[char])
+//     if (symbols.hasOwnProperty(char)) {
+//       newStr += symbols[char]
+//       continue
+//     }
+//     newStr += str[i]
+//   }
+//   // return replaced string
+//   return newStr;
+// }

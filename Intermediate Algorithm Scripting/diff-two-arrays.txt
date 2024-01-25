@@ -1,0 +1,87 @@
+function diffArray(arr1, arr2) {
+  const newArr = [];
+  // 2 condtions, different loops 
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) < 0 && newArr.indexOf(arr1[i]) < 0) {
+      newArr.push(arr1[i]);
+    }
+  }
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr1.indexOf(arr2[j]) < 0 && newArr.indexOf(arr2[j]) < 0) {
+      newArr.push(arr2[j]);
+    }
+  }
+  // from the guide
+  // solution 1: similar with your solution, but the similar loops are made into a function that is called twice
+  // solution 2: using concat(), filter(), and includes() 
+  // solution 3: a function that use filter() & check condition, above that return array with spread operator on that function, twice
+  // solution 4: using Set() and forEach(), then check has() delete() add() 
+  return newArr;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+
+console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
+console.log(diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
+console.log(diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]))
+console.log(diffArray([], ["snuffleupagus", "cookie monster", "elmo"]))
+console.log(diffArray([1, "calf", 3, "piglet"], [7, "filly"]))
+
+
+// passes 2 of 6 output tests
+  // for (let i = 0; i < arr1.length; i++) {
+  //   for (let j = 0; j < arr2.length; j++) {
+  //     // check if arr[i] in arr2 index is > 0, push to newArr 
+  //     if (arr2.indexOf(arr1[i]) < 0) {
+  //       newArr.push(arr1[i])
+  //       break
+  //     } 
+  //     if (arr1.indexOf(arr2[j]) < 0) {
+  //       newArr.push(arr2[j])
+  //       break
+  //     }
+  //   }
+  // }
+
+  // passes 4 of 6 output tests 
+  //   for (let i = 0; i < arr1.length; i++) {
+  //   for (let j = 0; j < arr2.length; j++) {
+  //     // check if arr[i] in arr2 index is > 0, push to newArr 
+  //     if (arr2.indexOf(arr1[i]) < 0) {
+  //       if (newArr.indexOf(arr1[i]) >= 0) {
+  //         continue
+  //       }
+  //       newArr.push(arr1[i])
+  //       break
+  //     } 
+  //     if (arr1.indexOf(arr2[j]) < 0) {
+  //       if (newArr.indexOf(arr2[j]) >= 0) {
+  //         continue
+  //       }
+  //       newArr.push(arr2[j])
+  //       break
+  //     }
+  //   }
+  // }
+
+  // simplified the 4 of 6 output tests with 2 conditions
+    // for (let i = 0; i < arr1.length; i++) {
+  //   let added = false; // Flag to track if element is added
+  //   for (let j = 0; j < arr2.length; j++) {
+  //     // check if arr[i] in arr2 index is > 0, push to newArr 
+  //     if (arr2.indexOf(arr1[i]) < 0 && !added) {
+  //       if (newArr.indexOf(arr1[i]) < 0) {
+  //         newArr.push(arr1[i]);
+  //         added = true;
+  //       }
+  //     } 
+  //     if (arr1.indexOf(arr2[j]) < 0 && !added) {
+  //       if (newArr.indexOf(arr2[j]) < 0) {
+  //         newArr.push(arr2[j]);
+  //         added = true;
+  //       }
+  //     }
+  //   }
+  // }

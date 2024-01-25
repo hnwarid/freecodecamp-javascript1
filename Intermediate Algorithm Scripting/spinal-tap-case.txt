@@ -1,0 +1,40 @@
+function spinalCase(str) {
+  let newStr = "";
+  // separate by caps, spaces, dashes, etc
+  // newStr += str[0]
+  for (let i = 0; i<str.length;i++){
+    // if (str[i] != 0) {
+      // if (str[i+1] !== " " && str[i].match(/[A-Z]/)) {
+      // if (str[i].match(/[A-Z]/) && str[i+1] !== " ") {
+      if (str[i].match(/[A-Z]/) && str[i+1].match(/[a-z]/)) {
+        newStr += " "
+      }
+      // else if (str[i].match(/[A-Z]/) && str[i-1] == " ") {
+      //   newStr += " "
+      // }
+      newStr += str[i]
+    // }
+    // newStr += str[i]
+  }
+
+  // change caps to lowercase
+  let strArr = newStr.toLowerCase().split(/[\s-_\W]/g)
+  strArr = strArr.filter((word) => word.length > 0)
+  // console.log(str.split(/[\s_-]/g))
+  // console.log(strArr) 
+  
+  // join with dashes
+
+  return strArr.join("-");
+  // return strArr
+  // return newStr;
+}
+
+// spinalCase('This Is Spinal Tap');
+
+
+console.log(spinalCase("This Is Spinal Tap"))
+console.log(spinalCase("thisIsSpinalTap"))
+console.log(spinalCase("The_Andy_Griffith_Show"))
+console.log(spinalCase("Teletubbies say Eh-oh"))
+console.log(spinalCase("AllThe-small Things"))
