@@ -18,7 +18,7 @@ function zeroArray(m, n) {
     // console.log(newArray)
     // Pushes the current row, which now has n zeroes in it, to the array
     newArray.push(row);
-    row = []  // reset the row 
+    row = []  // reset the row // can also move the 4th line let row = [] to 11th line 
   }
   return newArray;
 }
