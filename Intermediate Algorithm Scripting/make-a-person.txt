@@ -1,0 +1,48 @@
+const Person = function(first, last) {
+  let firstName = first; 
+  let lastName = last;
+  
+  this.getFirstName = () => firstName
+  this.getLastName = () => lastName
+  this.getFullName = () => this.getFirstName() + " " + this.getLastName()
+
+  this.setFirstName = (first) => firstName = first
+  this.setLastName = (last) => lastName = last
+  this.setFullName = (first, last) => {
+    this.setFirstName(first)
+    this.setLastName(last)
+    return this.getFullName()
+    }
+};
+
+
+
+// passes -6 tests 
+// No properties should be added. Object.keys(Person).length should always return 6.
+// The .getFullName() method should return the string Bob Ross.
+// Failed:The .getFullName() method should return the string Haskell Ross after calling .setFirstName('Haskell').
+// Failed:The .getFullName() method should return the string Bob Curry after calling .setLastName('Curry').
+// Failed:The .getFullName() method should return the string Haskell Curry after calling .setFullName('Haskell', 'Curry').
+// The .getFullName() method should return the string Emily Martinez de la Rosa after calling .setFullName('Emily Martinez', 'de la Rosa').
+
+// const Person = function(first, last) {
+//   // this.getFullName = function() {
+//   //   return "";
+//   // };
+//   // return "";
+  
+//   this._first = first;
+//   this._last = last;
+  
+//   this.getFirstName = () => this._first
+//   this.getLastName = () => this._last
+//   this.getFullName = () => this.getFirstName() + " " + this.getLastName  // typo on getLastName() which leaves 1 test: Object.keys(Person).length = 6   
+
+//   this.setFirstName = (first) => this._first = first
+//   this.setLastName = (last) => this._last = last
+//   this.setFullName = (first, last) => {
+//     this.setFirstName(first)
+//     this.setLastName(last)
+//     return this.getFullName()
+//     }
+// };

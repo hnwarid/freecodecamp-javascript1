@@ -1,0 +1,45 @@
+function truthCheck(collection, pre) {
+  // let stat = true
+  let count = 0;
+  // loop through array 
+  for (let i = 0; i < collection.length; i++) {
+    // console.log(collection[i])
+    for (const key in collection[i]) {
+      console.log(key)
+
+      if (key === pre && Boolean(collection[i][pre]) == true) {
+        // stat = false;
+        count += 1
+
+      }
+    }
+  } 
+  // return stat;
+  return count == collection.length;
+}
+
+// truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot");  
+
+console.log(truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot"))
+
+
+
+// passes 6 of 10 
+// function truthCheck(collection, pre) {
+//   let stat = true
+//   // loop through array 
+//   for (let i = 0; i < collection.length; i++) {
+//     // console.log(collection[i])
+//     for (const key in collection[i]) {
+//       console.log(key)
+
+//       if (key === pre && collection[i][pre] == false) {
+//         stat = false;
+//       }
+//     }
+//   } 
+//   return stat;
+// }
+
+// passes 9 of 10 with this 
+      // if (key === pre && Boolean(collection[i][pre]) == false) 

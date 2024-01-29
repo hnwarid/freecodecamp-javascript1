@@ -1,0 +1,38 @@
+function smallestCommons(arr) {
+  // sort array
+  let newArr = arr.slice()
+  newArr.sort((a,b) => a- b)
+  // console.log(newArr)
+
+  let max = newArr[1]
+  let min = newArr[0]
+  let result = max
+
+  // loop through the range 
+  for (let num = max; num >=min; num--) {
+    let num1 = result;
+    let num2 = num;
+  
+  // loop to find GCM 
+    while (num2 !== 0) {
+      let left = num1 % num2
+      num1 = num2
+      num2 = left
+    }
+  
+  // find LCM 
+  let lcm = result * num / num1
+
+  // result = lcm
+  result = lcm
+  }
+  return result;
+}
+
+// smallestCommons([1,5]);
+
+
+console.log(smallestCommons([5, 1]))
+console.log(smallestCommons([2, 10]))
+console.log(smallestCommons([1, 13]))
+console.log(smallestCommons([23, 18]))

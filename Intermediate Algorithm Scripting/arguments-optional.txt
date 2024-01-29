@@ -1,0 +1,40 @@
+function addTogether() {
+  // since it is supposed to be optional, no arguments on function definition
+  let [num1, num2] = arguments 
+  // console.log(arguments.length)
+
+  // base case, 2 number args  
+  if (arguments.length == 2 && (typeof arguments[0] == "number" && typeof arguments[1] === "number")) {
+    return num1 + num2;
+  } else if (arguments.length === 1) {  // second case not a number
+    if (typeof num1 !== "number")  {
+      return undefined
+    } else if (typeof num1 === "number") { // third case 1 arg 
+      return num2 => addTogether(num1, num2)
+    } 
+  } 
+
+  // return num1 + num2
+  // return arguments;
+}
+
+// addTogether(2,3);
+
+console.log(addTogether(2, 3))
+console.log(addTogether(23.4, 30))
+console.log(addTogether("2", 3))
+console.log(addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ"))
+console.log(addTogether(5))
+console.log(addTogether(2, "3"))
+console.log(addTogether(5)(7)) // TypeError: addTogether(...) is not a function 
+console.log(addTogether(2)([3])) // TypeError: addTogether(...) is not a function
+
+
+
+// passes 6 of 9 tests
+// function addTogether() {
+//   let [num1, num2] = arguments 
+//   if (arguments.length == 2 && (typeof arguments[0] == "number" && typeof arguments[1] === "number")) {
+//     return num1 + num2;
+//   } 
+// }

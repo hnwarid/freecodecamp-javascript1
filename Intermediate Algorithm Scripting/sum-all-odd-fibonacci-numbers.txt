@@ -1,0 +1,36 @@
+function sumFibs(num) {
+  // many functions before this can be broken down into several, but what of here, can the fibonacci function be made on its own then call it from outside or within? Oh well 
+  // init sum, 1st & 2nd val 
+  let sum = 0;
+  let fib1 = 0;
+  let fib2 = 1;
+
+  // make array of fib vals, then map if % 2 !== 0, add to res? a bit complex I guess
+  // make loop that add fib nums then update both vars, check division while at it? 
+  // what var to use as loop index? sum == fib1 
+  while (fib2 <= num) {
+    
+    // console.log(fib2) // infinite loop before reassignment
+    fib2 += fib1
+    // console.log(fib2)
+    fib1 = fib2 - fib1
+    // console.log(fib1)
+  // add to res 
+  if (fib1 % 2 != 0) {
+    sum += fib1
+  }
+
+  }
+  
+  // console.log(sum)
+  return sum;
+}
+
+sumFibs(4);
+
+console.log(sumFibs(1))
+console.log(sumFibs(1000))
+console.log(sumFibs(4000000))
+console.log(sumFibs(4))
+console.log(sumFibs(75024))
+console.log(sumFibs(75025))
